@@ -11,9 +11,9 @@ class Taxes
 
         double HourlyRate;
         double GP; //Gross Pay
-        double FT; //Fed Tax
-        double FICA; //Social Security Tax
-        double ST; //State Tax
+        final double  FT; //Fed Tax
+        final double FICA; //Social Security Tax
+        final double ST; //State Tax
         double NP; //Net Pay
 
 
