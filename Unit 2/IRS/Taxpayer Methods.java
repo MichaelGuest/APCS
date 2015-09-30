@@ -1,4 +1,4 @@
-package IRS;
+package IRSS;
 
 public class Taxpayer {
 
