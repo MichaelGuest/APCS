@@ -20,26 +20,26 @@ public class loanTable {
         System.out.println("Time = " + time + " years");
 
         System.out.println("A low interest rate in %: ");
-        double lowInt = console.readDouble() / 100;
+        double lowInt = console.readDouble();
         System.out.println("Low rate = " + lowInt + "%");
 
         System.out.println("A high interest rate in %: ");
-        double highInt = console.readDouble() / 100;
+        double highInt = console.readDouble();
         System.out.println("High rate = " + highInt + "%");
 
         //While Loop
         while (lowInt <= highInt) {
 
-            double k = lowInt / 12;
+            double k = lowInt / 1200;
             double n = time * 12;
             double c = Math.pow((1 + k), n);
             double a = (p * k * c) / (c - 1);
 
-            System.out.println("Annual interest rate: " + lowInt * 100);
+            System.out.println("Annual interest rate: " + lowInt);
             System.out.println("Monthly Payment: " + Format.left(a, 2, 2));
 
             //Incrementing by .25
-            lowInt += (0.25 / 100);
+            lowInt += 0.25;
         }
     }
 
