@@ -23,7 +23,7 @@ public class loanTable {
 
         System.out.println("Amount of the loan: ");
         p = console.readDouble();
-        System.out.println("Principal = " + p + "$");
+        System.out.println("Principal = $" + p);
 
         System.out.println("The length of loan in years: ");
         time = console.readInt();
@@ -48,7 +48,7 @@ public class loanTable {
             System.out.println("Annual interest rate: " + low * 100);
             System.out.println("Monthly Payment: " + Format.left(a, 2, 2));
 
-            low += (.25 / 100);
+            low += (0.25 / 100);
         }
     }
 
