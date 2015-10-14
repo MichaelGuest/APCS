@@ -1,0 +1,93 @@
+Worksheet W.A.12.1	Name______________________________
+
+OBJECTS AND OBJECT REFERENCES
+
+
+1.	Given the the following declarations:
+
+int area;
+String name;
+
+	a.	area is a primitive variable, and name is a reference variable.
+
+b.	How many objects have been created? None
+
+2.	Given the the following section of code:
+
+String strA = new String("Oh! ");
+String strB = new String("No! "); 
+
+strA = strB;
+System.out.print(strA);
+System.out.println(strB);
+
+	What is written to the monitor?  No! No!
+
+3.	Given the the following section of code:
+
+String strA = new String("Oh! ");
+String strB = new String("No! "); 
+
+strA = strB;
+if (strA == strB)	
+  system.out.println("Two copies of a reference.");
+else
+  system.out.println("Two different references.");
+
+	What is written to the monitor?  Two copies of a reference.
+
+4.	Examine the following section of code:
+
+String strA = new String("String ");
+String strB = new String("Cheese "); 
+
+strA = strB;
+
+How many objects have been created? After the last statement has executed, how many objects are now accessible (don't count garbage)?
+
+Created: 2	Accessible: 1
+5.	Examine the following section of code:
+
+String strA;
+strA = new String("Cheese ");
+strA = new String("Theory ");
+strA = new String("Bikini ");
+strA = new String("Ensemble ");
+strA = new String("Quartet ");
+
+How many objects have been created? After the last statement has executed, how many objects are now accessible (don't count garbage)?
+
+Created: 5	Accessible: 5
+
+6.	Examine the following section of code:
+
+String strA = new String("Cheese ");
+String strB = new String("Theory ");
+String strC = new String("Bikini ");
+String strD = new String("Ensemble ");
+String strE = new String("Quartet ");
+
+How many objects have been created? After the last statement has executed, how many objects are now accessible (don't count garbage)?
+
+Created: 5	Accessible: 5
+
+7.	Examine the following section of code:
+
+String strA = new String("Cheese ");
+String strB = strA;
+String strC = strA;
+String strD = strA;
+String strE = strA;
+
+How many objects have been created? After the last statement has executed, how many objects are now accessible (don't count garbage)?
+
+Created: 1	Accessible: 4
+
+8.	An object that has no references to it is called garbage .
+
+9.	If several reference variables refer to the same object, each variable is said to be an 
+alias of the object.
+
+10.	To check if two reference variables both refer to the same object, use the == operator.
+To check if two different string objects contain equivalent data, use the equal method.
+
