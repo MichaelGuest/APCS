@@ -11,14 +11,11 @@ public class Fibonacci {
 
 
     public static int nonRecFib(int num) {
-        if (num == 1 || num == 0) {
-            return 1;
-        }
-        int fibol = 0, fibo2 = 1, fibonacci = 3;
+        int sum1 = 0, sum2 = 1, fibonacci = 3;
         for (int i = 2; i <= num; i++) {
-            fibonacci = fibol + fibo2;
-            fibol = fibo2;
-            fibo2 = fibonacci;
+            fibonacci = sum1 + sum2;
+            sum1 = sum2;
+            sum2 = fibonacci;
         }
         return fibonacci;
     }
