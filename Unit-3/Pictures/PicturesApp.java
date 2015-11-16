@@ -1,4 +1,4 @@
-package pictures;
+package Pictures;
 
 import chn.util.*;
 
