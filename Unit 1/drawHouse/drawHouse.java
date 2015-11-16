@@ -3,6 +3,7 @@
  * Lab: LA1.1 DrawHouse
  * Creates a piece of paper and a pen, and draws a house with 2 windows and a door.
  */
+package drawHouse;
 import apcslib.*;
 
 public class drawHouse {
