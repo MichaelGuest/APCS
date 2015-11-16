@@ -1,3 +1,5 @@
+package PigLatin;
+public class PigLatin {
 public static void main(String[] args){
         ConsoleIO input = new ConsoleIO();
         String str, question;
@@ -85,3 +87,4 @@ public static void main(String[] args){
         num = Math.min(Math.min(Math.min(Math.min(a,e),i),o),u);
         return num;
     }    
+}
