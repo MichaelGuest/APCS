@@ -1,4 +1,4 @@
-package loanTable;
+package LoanTable;
 
 import apcslib.Format;
 import chn.util.*;
