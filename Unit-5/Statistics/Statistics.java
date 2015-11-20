@@ -1,14 +1,16 @@
 package Statistics;
 
-import chn.util.FileInput;
+import chn.util.*;
 
 public class Statistics {
-    Fileinput inFile = new Fileinput("numbers.txt");
     int[] data = new int[1000];
-    int index = 0;
-    public Statistics(){
-        while(inFile.hasMoreToekns()){
-            int x = inFile.readInt;
+
+    public Statistics() {
+        FileInput inFile = new FileInput("numbers.txt");
+        int index = 0;
+
+        while (inFile.hasMoreTokens()) {
+            int x = inFile.readInt();
             data[index] = x;
             index++;
         }
@@ -17,11 +19,23 @@ public class Statistics {
 
     public double average() {
         double sum = 0;
-        return average();
+        for (int a = 0; a < data.length; a++) {
+            sum += data[a];
+        }
+        return sum / (data.length - 1);
     }
 
-    public double sDeviation() {
-        return sDeviation();
+    public double sDev() {
+        double ans = 0;
+        double sum = 0;
+        double num = 0;
+        double avg = average();
+        for (int x = 0; x < data.length; x++) {
+            num = data[x];
+            sum += Math.pow(num - average(), 2);
+        }
+        ans = Math.sqrt(sum / (data.length - 1));
+        return ans;
     }
 
     public String mode() {
@@ -51,6 +65,9 @@ public class Statistics {
 
 
     public static void main(String[] args) {
-        
+        Statistics stats = new Statistics();
+        System.out.println("average " + stats.average());
+        System.out.println("sDeviation " + stats.sDev());
+        System.out.println("mode " + stats.mode());
     }
 }
