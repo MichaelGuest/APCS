@@ -1,16 +1,30 @@
-package PermutationGenerator;
+package Permutationsgenerator;
 
 import java.util.*;
 
-public class PermutationGenerator {
+public class PermutationsGenerator {
     public static void main(String args[]) {
-        List<Integer> permutation = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 
         for (int i = 0; i < 10; i++) {
-            Collections.shuffle(permutation);
-            System.out.println("list " + (i + 1) + ":  " + permutation);
-            System.out.println(" Sum of first and last: " + (permutation.get(0) + permutation.get(9)));
+            ArrayList<Integer> perm;
+            perm = perm();
+            System.out.println(perm + " " + (perm.get(0) + perm.get(perm.size() - 1)));
         }
+    }
+
+    public static ArrayList<Integer> perm() {
+        ArrayList<Integer> permutation = new ArrayList<Integer>();
+        for (int x = 1; x <= 10; x++) {
+            permutation.add(x);
+        }
+        ArrayList<Integer> newPerm = new ArrayList<Integer>();
+        for (int i = 0; i < 10; i++) {
+            int integer = (int) (permutation.size() * Math.random());
+            int num = permutation.get(integer);
+            newPerm.add(num);
+            permutation.remove(integer);
+        }
+        return newPerm;
     }
 }
 
